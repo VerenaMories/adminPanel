@@ -26,7 +26,6 @@ function App() {
 
   function getUserData() {
     let decodedToken = jwtDecode(localStorage.getItem("userToken"));
-
     setUserData(decodedToken);
   }
 
@@ -48,50 +47,44 @@ function App() {
     <>
       <Navbar userData={userData} logOut={logOut} />
 
-     
-        <MediaContextProvider>
-          <Routes>
-            <Route path="/" element={<Home />}></Route>
-            <Route
-              path="/home"
-              element={
-                <ProtectedRoute>
-                  <Home />
-                </ProtectedRoute>
-              }
-            ></Route>
-            <Route
-              path="/showqoutes"
-              element={
-                <ProtectedRoute>
-                  <ShowQuotes />
-                </ProtectedRoute>
-              }
-            ></Route>
-          
+      <MediaContextProvider>
+        <Routes>
+          <Route path="/" element={<Home />}></Route>
           <Route
-              path="/showmessages"
-              element={
-                <ProtectedRoute>
-                  <ShowMessages/>
-                </ProtectedRoute>
-              }
-            ></Route>
-          
-            <Route path="/register" element={
-           
-            <Register />
-        
-            }></Route>
-            <Route
-              path="/login"
-              element={<Login getUserData={getUserData} />}
-            ></Route>
+            path="/home"
+            element={
+              <ProtectedRoute>
+                <Home />
+              </ProtectedRoute>
+            }
+          ></Route>
+          <Route
+            path="/showqoutes"
+            element={
+              <ProtectedRoute>
+                <ShowQuotes />
+              </ProtectedRoute>
+            }
+          ></Route>
 
-            <Route path="*" element={<Notfound />}></Route>
-          </Routes>
-        </MediaContextProvider>
-  
+          <Route
+            path="/showmessages"
+            element={
+              <ProtectedRoute>
+                <ShowMessages />
+              </ProtectedRoute>
+            }
+          ></Route>
+
+          <Route path="/register" element={<Register />}></Route>
+          <Route
+            path="/login"
+            element={<Login getUserData={getUserData} />}
+          ></Route>
+
+          <Route path="*" element={<Notfound />}></Route>
+        </Routes>
+      </MediaContextProvider>
     </>
   );
 }
