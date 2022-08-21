@@ -1,0 +1,23 @@
+body {
+/* background-color: #131722!important; */
+/* color: #fff!important; */
+
+font-family: 'Comfortaa', cursive!important;
+font-family: 'Poppins', sans-serif!important;
+}
+
+.navbar-brand,.nav-link{
+  color: #fff!important;
+ 
+
+}
+.logo {
+  font-weight: 700;
+}
+.form-control{
+  background-color: transparent!important;
+  color: #fff!important;
+}
+.secondColor{
+  color: #949cb0;
+  ;}

@@ -1,0 +1,26 @@
+Link{
+    color: #fff;
+}
+i{
+    color: #fff;
+}
+input{
+ border-radius: 15px; 
+}
+.logo {
+    font-weight: 900!important;
+    color: blue!important;
+}
+nav{
+    background-color: #04AA6D!important;
+}
+.logoOlive{
+    background-size: cover;
+    /* background-position: center; */
+    width: 10%!important;
+    height: 10vh;
+    /* margin: 5px; */
+    /* border: #67d697 solid 2px;
+    border-radius: 20px; */
+    /* box-shadow: 3px 3px rgb(226, 223, 223); */
+  }
